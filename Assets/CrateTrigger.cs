@@ -31,11 +31,26 @@ public class CrateTrigger : MonoBehaviour
         player.gameObject.SetActive(false);
         movieCamera.gameObject.SetActive(true);
         Voice.enabled = true;
-        StartCoroutine(WaitOnAudio());      
-        CameraAnimator.SetTrigger(openTrigger);
+        StartCoroutine(WaitOnAudio());
+        StartCoroutine(
+            CameraAnimator.WaitOnAnimationCoroutine(
+            delegate { CameraAnimator.SetTrigger(openTrigger); },
+            delegate { player.gameObject.SetActive(true); }));
+        
         EnableBox(true);
         Destroy(Trig);
       
+    }
+    IEnumerator WaitOnAnimation()
+    {
+        CameraAnimator.SetTrigger(openTrigger);
+        yield return new WaitForEndOfFrame();
+        while (CameraAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1)
+        {
+            yield return null;
+
+        }
+        player.gameObject.SetActive(true);
     }
     private void OnTriggerExit(Collider other)
     {

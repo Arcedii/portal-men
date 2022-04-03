@@ -26,9 +26,14 @@ public class ZipLine : MonoBehaviour
        
 
         but.onClick.AddListener(delegate {
-            StartCoroutine(WaitOnAnimation());
+            StartCoroutine(ZipLineAnimator.WaitOnAnimationCoroutine(ZipLine1, EnableInputAfterAnim));
         });
         DoorMessage.gameObject.SetActive(false);
+    }
+
+    void EnableInputAfterAnim()
+    {
+       EnableInput(true); 
     }
 
    
@@ -58,19 +63,6 @@ public class ZipLine : MonoBehaviour
     {
         rb.GetComponent<Rigidbody>().useGravity = state;
         Move.gameObject.SetActive(state);
-    }
-
-    IEnumerator WaitOnAnimation()
-    {
-        ZipLine1();
-        yield return new WaitForEndOfFrame();
-        while (ZipLineAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1)
-        {
-            yield return null;
-
-        }
-        EnableInput(true);
-
     }
 
     private void OnDestroy()
