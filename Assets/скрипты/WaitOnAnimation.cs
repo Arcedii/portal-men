@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-public static class WaitOnAnimation
+public static class WaitOnAnimation 
 {
     public static IEnumerator WaitOnAnimationCoroutine(this Animator animator, Action onStart = null, Action onEnd = null)
     {

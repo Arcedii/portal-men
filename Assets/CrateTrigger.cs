@@ -52,10 +52,7 @@ public class CrateTrigger : MonoBehaviour
         }
         player.gameObject.SetActive(true);
     }
-    private void OnTriggerExit(Collider other)
-    {
-        player.gameObject.SetActive(true);
-    }
+
 
 
 
