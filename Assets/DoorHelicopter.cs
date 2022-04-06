@@ -18,18 +18,18 @@ public class DoorHelicopter : MonoBehaviour
     AudioSource squeak;
     void Start()
     {
+        Trig.gameObject.SetActive(false);
         but.onClick.AddListener(DoorOpen);
         but.gameObject.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
         but.gameObject.SetActive(true);
-
     }
     private void OnTriggerExit(Collider other)
     {
+       
         but.gameObject.SetActive(false);
-
     }
     void DoorOpen()
     {
