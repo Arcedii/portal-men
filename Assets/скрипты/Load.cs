@@ -8,6 +8,8 @@ public class Load : MonoBehaviour
 {
     public GameObject LineObj;
     public Slider line;
+    public float maxLoadTime = 5;
+    float loadTime = 0f;
 
     void Start()
     {
@@ -16,14 +18,27 @@ public class Load : MonoBehaviour
 
     IEnumerator LoadLevel()
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(2);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
 
-        while(!operation.isDone)
+        operation.allowSceneActivation = false;
+
+        while(loadTime < maxLoadTime)
         {
-            float p = Mathf.Clamp01(operation.progress / 20f);
-            line.value = p;
+            loadTime += Time.deltaTime;
+            line.value = NormalizeNumber(loadTime, 5, 0);
 
             yield return null;
         }
+
+        operation.allowSceneActivation = true;
+
+        yield return null;
+
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    float NormalizeNumber(float value, float max, float min)
+    {
+        return (value - min) / (max - min);
     }
 }

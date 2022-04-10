@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 957c90fba6629bc468679c7ec47127f7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -17205,6 +17205,14 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 111246925398335152, guid: 70c554733aaae324db86271270b25d31, type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 111246925398335152, guid: 70c554733aaae324db86271270b25d31, type: 3}
+      propertyPath: far clip plane
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 113052147335218784, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -17245,6 +17253,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.048
       objectReference: {fileID: 0}
+    - target: {fileID: 7281675586294588104, guid: 70c554733aaae324db86271270b25d31, type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7281675586294588105, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -17279,15 +17291,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586431242868, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 87.1
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586431242868, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586431242868, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 94.2
+      value: -120.6
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586431242868, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalRotation.w
@@ -96659,15 +96671,15 @@ RectTransform:
   m_GameObject: {fileID: 2106169559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1897347, y: 1.4062, z: 1.4062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2098663928}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 613.4, y: -17.951612}
-  m_SizeDelta: {x: 88.06, y: 77.2967}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -79, y: -1.7999878}
+  m_SizeDelta: {x: 182.29999, y: 102.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106169561
 MonoBehaviour:
