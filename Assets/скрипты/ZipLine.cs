@@ -61,6 +61,7 @@ public class ZipLine : MonoBehaviour
 
     private void EnableInput(bool state)
     {
+        ZipLineAnimator.enabled = !state;
         rb.GetComponent<Rigidbody>().useGravity = state;
         Move.gameObject.SetActive(state);
     }
