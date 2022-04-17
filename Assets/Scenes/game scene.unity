@@ -17866,7 +17866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 111246925398335152, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: field of view
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 111246925398335152, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: far clip plane
@@ -17886,11 +17886,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 129569084458260450, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.000004887581
+      value: 0.0000007227063
       objectReference: {fileID: 0}
     - target: {fileID: 129569084458260450, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3280002
+      value: 1.3280007
       objectReference: {fileID: 0}
     - target: {fileID: 129569084458260450, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17913,6 +17913,10 @@ PrefabInstance:
       value: 0.048
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586294588104, guid: 70c554733aaae324db86271270b25d31, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281675586294588104, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_Lens.FarClipPlane
       value: 100
       objectReference: {fileID: 0}
@@ -17922,11 +17926,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586294588111, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.10000489
+      value: -0.09999928
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586294588111, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5220002
+      value: 1.5220007
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586294588111, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17950,15 +17954,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586431242868, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 129.22
+      value: -19.01
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586431242868, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 29.12
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586431242868, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -106.08
+      value: -105.4
       objectReference: {fileID: 0}
     - target: {fileID: 7281675586431242868, guid: 70c554733aaae324db86271270b25d31, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23449,7 +23453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &582215549
 Transform:
   m_ObjectHideFlags: 0
@@ -27223,7 +27227,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 3ee30198ddb3eb344bd3ec1365cc47f9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -48405,6 +48409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39876ed61c2c2b46bfbe88f4f0b0b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 692544106}
   _cube: {fileID: 692544105}
   _rigidbody: {fileID: 1118541201}
   _clicked: 0
@@ -101252,7 +101257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2086373016
 Transform:
   m_ObjectHideFlags: 0

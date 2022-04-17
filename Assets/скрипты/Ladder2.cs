@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Ladder2 : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler
 {
-  
+    [SerializeField] Animator player;
     [SerializeField] GameObject _cube;
     [SerializeField] Rigidbody _rigidbody;
 
@@ -21,9 +21,10 @@ public class Ladder2 : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
         bool isHolding = _clicked && _entered;
 
         _rigidbody.useGravity = !isHolding;
-
+        player.enabled = !isHolding;
         if (isHolding)
         {
+
             _cube.transform.position += Vector3.up * Time.deltaTime * 5f;
         }
     }
