@@ -17,6 +17,7 @@ public class DialogDethMan : MonoBehaviour
     GameObject player;
     [SerializeField]
     GameObject movieCamera;
+    
 
 
     void Start()
