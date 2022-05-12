@@ -9,12 +9,14 @@ public class DoorTower : MonoBehaviour
     [SerializeField]
     Button but;
     private string openTrigger = "openn";
+    private string openTrigger2 = "opendoor";
     [SerializeField]
     BoxCollider Trig;
     [SerializeField]
     Canvas DoorMessage;
     [SerializeField]
     AudioSource squeak;
+    GameObject Lock;
     void Start()
     {
         Trig.gameObject.SetActive(false);
@@ -35,8 +37,16 @@ public class DoorTower : MonoBehaviour
     void DoorOpen()
     {
         DoorHelicopterAnimator.SetTrigger(openTrigger);
-        squeak.Play();
         Destroy(Trig);
+        Destroy(Lock);
         Destroy(DoorMessage);
+        if (Trig == false)
+        {
+            squeak.Play();
+            DoorHelicopterAnimator.SetTrigger(openTrigger2);
+
+        }
+     
+     
     }
 }
