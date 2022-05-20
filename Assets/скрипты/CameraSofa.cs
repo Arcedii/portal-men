@@ -45,19 +45,25 @@ public class CameraSofa : MonoBehaviour
     {
         player.gameObject.SetActive(false);
         movieCamera.gameObject.SetActive(true);
-        Voice.enabled = true;
-        StartCoroutine(WaitOnAudio());
+       
         StartCoroutine(
             CameraAnimator.WaitOnAnimationCoroutine(
             delegate { CameraAnimator.SetTrigger(openTrigger); },
-            delegate { GetUp.gameObject.SetActive(true); }));
-
+            delegate { Voice.enabled = true; }));      
+         StartCoroutine(WaitOnAudio());
+         
         SitDown.gameObject.SetActive(false);
-        Destroy(Trig);   
-    }
+        Destroy(Trig);
+        if (Voice.enabled == false)
+        {
+            GetUp.gameObject.SetActive(true);
+        }
 
+    }
+   
     void LastAnim()
     {
+       
         StartCoroutine(
            CameraAnimator.WaitOnAnimationCoroutine(
            delegate { CameraAnimator.SetTrigger(openTrigger2); },
