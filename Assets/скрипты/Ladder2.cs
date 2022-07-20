@@ -12,7 +12,7 @@ public class Ladder2 : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
     [SerializeField] bool _clicked;
     [SerializeField] bool _entered;
 
-    void Update()
+    void FixedUpdate()
     {
         GoUp();
     }
@@ -28,7 +28,7 @@ public class Ladder2 : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler,
             _cube.transform.position += Vector3.up * Time.deltaTime * 5f;
         }
     }
-
+   
     public void OnPointerDown(PointerEventData eventData)
     {
         _clicked = true;

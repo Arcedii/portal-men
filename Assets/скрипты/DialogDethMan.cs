@@ -7,8 +7,6 @@ public class DialogDethMan : MonoBehaviour
     [SerializeField]
     Animator CameraAnimator;
     [SerializeField]
-    Rigidbody[] rigidbodiesList;
-    [SerializeField]
     BoxCollider Trig;
     [SerializeField]
     AudioSource Voice;
@@ -23,7 +21,7 @@ public class DialogDethMan : MonoBehaviour
     void Start()
     {
         Voice = gameObject.GetComponent<AudioSource>();
-        EnableBox(false);
+        
         player.gameObject.SetActive(true);
         movieCamera.gameObject.SetActive(false);
     }
@@ -36,9 +34,9 @@ public class DialogDethMan : MonoBehaviour
         StartCoroutine(
             CameraAnimator.WaitOnAnimationCoroutine(
             delegate { CameraAnimator.SetTrigger(openTrigger); },
-            delegate { player.gameObject.SetActive(true); }));
+            delegate { Destroy(); }));
 
-        EnableBox(true);
+      
         Destroy(Trig);
 
     }
@@ -70,13 +68,10 @@ public class DialogDethMan : MonoBehaviour
         }
         Voice.enabled = false;
     }
-
-    void EnableBox(bool state)
+    void Destroy()
     {
-        foreach (var box in rigidbodiesList)
-        {
-            box.gameObject.SetActive(state);
-        }
-
+        player.gameObject.SetActive(true);
+        Destroy(movieCamera);
     }
+   
 }

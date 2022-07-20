@@ -31,11 +31,17 @@ public class DethManCameraControll : MonoBehaviour
         StartCoroutine(
             CameraAnimator.WaitOnAnimationCoroutine(
             delegate { CameraAnimator.SetTrigger(openTrigger); },
-            delegate { player.gameObject.SetActive(true); }));
+            delegate { Destroying(); }));
 
-       
+        
         Destroy(Trig);
 
+    }
+
+    void Destroying()
+    {
+        player.gameObject.SetActive(true);
+        Destroy(movieCamera);
     }
     IEnumerator WaitOnAnimation()
     {

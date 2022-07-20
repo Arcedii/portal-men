@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Box
   - Fire
+  - Death
   layers:
   - Default
   - TransparentFX

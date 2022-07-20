@@ -15,6 +15,7 @@ public class MapON : MonoBehaviour
         on.onClick.AddListener(On);
         Map.gameObject.SetActive(false);
         of.gameObject.SetActive(false);
+       
     }
 
 

@@ -45,19 +45,17 @@ public class CameraSofa : MonoBehaviour
     {
         player.gameObject.SetActive(false);
         movieCamera.gameObject.SetActive(true);
-       
+        Voice.Play();
         StartCoroutine(
             CameraAnimator.WaitOnAnimationCoroutine(
             delegate { CameraAnimator.SetTrigger(openTrigger); },
-            delegate { Voice.enabled = true; }));      
-         StartCoroutine(WaitOnAudio());
+            delegate { GetUp.gameObject.SetActive(true); }));      
+         
          
         SitDown.gameObject.SetActive(false);
-        Destroy(Trig);
-        if (Voice.enabled == false)
-        {
-            GetUp.gameObject.SetActive(true);
-        }
+        Destroy(Trig);              
+       
+        
 
     }
    
@@ -72,17 +70,5 @@ public class CameraSofa : MonoBehaviour
         GetUp.gameObject.SetActive(false);
       
     }
-    IEnumerator WaitOnAudio()
-    {
-        if (Voice.isPlaying)
-        {
-            yield break;
-        }
-        Voice.Play();
-        while (Voice.isPlaying)
-        {
-            yield return null;
-        }
-        Voice.enabled = false;
-    }
+   
 }

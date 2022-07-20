@@ -36,6 +36,6 @@ public class DoorHelicopter : MonoBehaviour
         DoorHelicopterAnimator.SetTrigger(openTrigger);
         squeak.Play();
         Destroy(Trig);
-        Destroy(DoorMessage);
+        DoorMessage.gameObject.SetActive(false);
     }
 }

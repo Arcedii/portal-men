@@ -171,7 +171,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011162724236}
-  - component: {fileID: 205000013057076746}
   m_Layer: 0
   m_Name: chainlink_group-2
   m_TagString: Untagged
@@ -195,26 +194,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!205 &205000013057076746
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000013870849648}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 0.02849245, y: 1.0469947, z: -0.005580753}
-  m_Size: 11.122079
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.16696917
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23000011776181728}
-  - screenRelativeHeight: 0.01
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23000010138162764}
-  m_Enabled: 1

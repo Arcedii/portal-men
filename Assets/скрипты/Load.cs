@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Load : MonoBehaviour
 {
+
+    public GameObject Scene;
     public GameObject LineObj;
     public Slider line;
     public float maxLoadTime = 5;
@@ -31,10 +33,14 @@ public class Load : MonoBehaviour
         }
 
         operation.allowSceneActivation = true;
-
+     
         yield return null;
 
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        
+        Scene.gameObject.SetActive(false);
+
+
     }
 
     float NormalizeNumber(float value, float max, float min)

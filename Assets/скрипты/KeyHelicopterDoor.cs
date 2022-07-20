@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class KeyHelicopterDoor : MonoBehaviour
 {
-    public Canvas ImageKey;
+    public Image ImageKey;
     public Canvas Key;
     public Button Keybut;
     public BoxCollider TrigDoor;
@@ -33,8 +33,8 @@ public class KeyHelicopterDoor : MonoBehaviour
         TrigDoorMessage.gameObject.SetActive(false);
         TrigDoor.gameObject.SetActive(true);
         ImageKey.gameObject.SetActive(true);
-        Destroy(Key);
-        Destroy(key);
+        Key.gameObject.SetActive(false);
+        key.gameObject.SetActive(false);
     }
 
 }
