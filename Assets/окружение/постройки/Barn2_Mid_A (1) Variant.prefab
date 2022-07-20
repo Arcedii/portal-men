@@ -54,7 +54,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 109388, guid: bbf238cb04c5df440a0c498ad01f08e2, type: 3}
       propertyPath: m_Name
-      value: Barn2_Mid_A (1)
+      value: Barn2_Mid_A (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 473440, guid: bbf238cb04c5df440a0c498ad01f08e2, type: 3}
       propertyPath: m_RootOrder
